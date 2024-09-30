@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import mongoose from 'mongoose';
+import session from 'express-session';
 import passport from 'passport';
 import compression from 'compression';
 import helmet from 'helmet';
@@ -35,6 +36,7 @@ app.set('views', join(__dirname, 'src/views'));
 app.set('view engine', 'pug');
 
 app.use(SessionConfig);
+app.use(session({ secret: process.env.SESSION_SECRET, resave: false, saveUninitialized: false }));
 app.use(passport.session());
 app.use(logger('dev'));
 app.use(express.json());
