@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
-import days from '../helpers/expirationDate.mjs';
+import days from '../../helpers/expirationDate.mjs';
 
 const mongoStoreOption = {
     mongoUrl: process.env.MONGO_DB,

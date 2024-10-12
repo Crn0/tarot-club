@@ -10,7 +10,7 @@
 import 'dotenv/config';
 import http from 'http';
 import debugFunc from 'debug';
-import app from '../src/app.mjs';
+import app from '../src/app.js';
 
 const debug = debugFunc('tarot-club:server');
 /**
